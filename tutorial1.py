@@ -1,6 +1,43 @@
 import turtle
 import random
+from turtle import *
 
+#   Key Presses & Events
+#   tutorial 3: https://www.youtube.com/watch?v=hPnZqWSRNZI
+#   Tim working in PyCharm this time, instead of IDLE
+
+tim = turtle.Turtle()
+tim.speed(0)
+tim.width(5)
+
+colors = ['red','blue','green','purple','yellow','orange','black']
+
+def up():
+    tim.setheading(90)  #points tim upwards
+    tim.forward(100)    #goes forward 100 (pixels?)
+
+def down():
+    tim.setheading(270) #points tim downwards
+    tim.forward(100)    #goes forward 100 (pixels?)
+
+def left():
+    tim.setheading(180) #points tim left
+    tim.forward(100)    #goes forward 100 (pixels?)
+
+def right():
+    tim.setheading(0)   #points tim right
+    tim.forward(100)    #goes forward 100 (pixels?)
+
+turtle.listen()         #listens for events
+
+turtle.onkey(up, 'Up')
+turtle.onkey(down, 'Down')
+turtle.onkey(left, 'Left')
+turtle.onkey(right, 'Right')
+
+turtle.mainloop()       #continues to look for keypresses
+
+'''
 #   tutorial 2: https://www.youtube.com/watch?v=KmziL1djFkQ
 
 tim = turtle.Turtle()
@@ -45,7 +82,6 @@ for x in range(5):
 #   so that we don't have to keep defining a new for-loop every time we want
 #   a non-circle shape to fill
 
-'''
 #   following Python Turtle Graphics Tutorial #1 - Introduction
 #   https://www.youtube.com/watch?v=p7CiFhiTdvY
 
