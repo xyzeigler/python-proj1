@@ -9,6 +9,7 @@ from turtle import *
 tim = turtle.Turtle()
 tim.speed(0)
 tim.width(5)
+tim.shape('turtle')
 
 colors = ['red','blue','green','purple','yellow','orange','black']
 
@@ -28,7 +29,17 @@ def right():
     tim.setheading(0)   #points tim right
     tim.forward(100)    #goes forward 100 (pixels?)
 
+def clickleft(x,y):
+    tim.color(random.choice(colors))
+
+def clickright(x,y):
+    tim.stamp()
+
 turtle.listen()         #listens for events
+
+turtle.onscreenclick(clickleft, 1)
+turtle.onscreenclick(clickright, 3)
+#turtle.onclick(clickleft, 1)    #1 leftmouseclick,2 mousewheelclick,3 rightmouseclick
 
 turtle.onkey(up, 'Up')
 turtle.onkey(down, 'Down')
