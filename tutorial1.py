@@ -2,6 +2,9 @@ import turtle
 import random
 from turtle import *
 
+#   https://www.youtube.com/watch?v=HRKQlEfEMCA 4th tutorial
+#   mastery of basic turtle module. move into pygame module.
+
 #   Key Presses & Events
 #   tutorial 3: https://www.youtube.com/watch?v=hPnZqWSRNZI
 #   Tim working in PyCharm this time, instead of IDLE
